@@ -11,7 +11,6 @@ int oddElement(int a[], int size)
     //compare the first loop element with all the elements in the second loop
     for(int i=0;i<size;i++)
     {
-
         int count = 0;
 
         for(int j=0;j<size;j++)
@@ -19,9 +18,13 @@ int oddElement(int a[], int size)
             //whenever the element is equal to another, increment the count by 1
             if(a[i]==a[j])
             {
+                cout<<a[i]<<" is equal to "<<a[j]<< " at position i = "<<i<<" and position j = "<<j<<endl;
                 count++;
             }
         }
+
+        cout<<a[i]<<" has count = "<<count<<endl;
+
         //for the element whose count has been found,check if it is divisble by 2 or not
         if(count%2!=0)
         {

@@ -13,20 +13,21 @@ int main()
 
     int size = sizeof(a)/sizeof(a[0]);
 
-    int count = 0;
-
     //this sets the element to be compared
     for(int i=0;i<size;i++)
     {
+            int count = 0;
         // this ensures that the present element is compared with the elements before it as well
         for(int j=0;j<size;j++)
         {
             if(a[i]==a[j])
             {
+                cout<<a[i]<<" is equal to "<<a[j]<< " at position i = "<<i<<" and position j = "<<j<<endl;
                 count++;
             }
         }
 
+        cout<<a[i]<<" has count = "<<count<<endl;
         //check if the count is odd or even
         if(count%2!=0)
         {
